@@ -1,53 +1,273 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Things I've Made</title>
-    <style>
-:root{--paper:#fff8ed;--ink:#202020;--pink:#ff5c8a;--yellow:#ffd84d;--blue:#5cc8ff;--green:#73d68c}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 10% 10%,rgba(255,216,77,.35) 0 90px,transparent 91px),radial-gradient(circle at 92% 15%,rgba(92,200,255,.3) 0 110px,transparent 111px),var(--paper);color:var(--ink);font-family:"Trebuchet MS",system-ui,sans-serif;padding:4rem 1.5rem 5rem}main{max-width:1000px;margin:auto}header{position:relative;margin-bottom:3.5rem;max-width:720px}.eyebrow{display:inline-block;background:var(--ink);color:white;padding:.45rem .8rem;border-radius:999px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-2deg);margin-bottom:1rem}h1{font-family:Georgia,serif;font-size:clamp(3.4rem,9vw,6.5rem);line-height:.88;letter-spacing:-.07em;margin:0}h1 span{color:var(--pink)}.subtitle{font-size:1.15rem;line-height:1.6;max-width:600px;margin:1.4rem 0 0;color:#555}.scribble{position:absolute;right:0;bottom:-1.2rem;font-family:Georgia,serif;font-style:italic;font-size:1.2rem;transform:rotate(7deg)}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}.card{position:relative;min-height:220px;padding:2rem;border:3px solid var(--ink);border-radius:24px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;box-shadow:8px 8px 0 var(--ink);transition:transform .18s ease,box-shadow .18s ease}.card:nth-child(1){background:var(--yellow)}.card:nth-child(2){background:var(--blue)}.card:nth-child(3){background:var(--pink)}.card:nth-child(4){background:var(--green)}.card:hover{transform:translate(-4px,-5px) rotate(-1deg);box-shadow:13px 13px 0 var(--ink)}.number{position:absolute;top:1.2rem;left:1.5rem;font-weight:900;font-size:.8rem;opacity:.65}.shape{position:absolute;width:90px;height:90px;border:3px solid var(--ink);border-radius:50%;right:1.5rem;top:1.2rem;opacity:.8}.card:nth-child(2) .shape{border-radius:12px;transform:rotate(18deg)}.card:nth-child(3) .shape{border-radius:10px 50% 50% 50%;transform:rotate(-18deg)}.card:nth-child(4) .shape{border-radius:50% 10px 50% 10px;transform:rotate(22deg)}.card h2{margin:0 0 .4rem;font-family:Georgia,serif;font-size:2rem;letter-spacing:-.04em}.card p{margin:0;max-width:430px;font-size:.98rem;line-height:1.5}footer{margin-top:3rem;font-size:.85rem;color:#666}@media(max-width:650px){body{padding-top:2.5rem}.grid{grid-template-columns:1fr}.scribble{display:none}.card{min-height:190px}}
-    </style>
+    <meta name="description" content="Simple, honest recipes with no distractions.">
+    <title>SimpleBite — Simple Recipes</title>
+
+<style>
+    :root {
+        --bg-color: #fdfbf7;
+        --text-color: #222222;
+        --gray-color: #666666;
+        --accent-color: #c86d51;
+        --card-bg: #ffffff;
+        --border-color: #eae7df;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        padding: 2rem 1rem;
+    }
+
+    header {
+        max-width: 1000px;
+        margin: 0 auto 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    nav a {
+        color: var(--gray-color);
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+        color: var(--text-color);
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 3px;
+    }
+
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        margin-bottom: 3.5rem;
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+        color: var(--gray-color);
+        font-size: 1.1rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        overflow: hidden;
+        transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-2px);
+    }
+
+    .card-img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        background-color: #f0ede6;
+    }
+
+    .card-content {
+        padding: 1.25rem;
+    }
+
+    .card-category {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--accent-color);
+        margin-bottom: 0.3rem;
+        font-weight: 600;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-title a {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    .card-title a:hover,
+    .card-title a:focus-visible {
+        text-decoration: underline;
+    }
+
+    .card-meta {
+        font-size: 0.85rem;
+        color: var(--gray-color);
+    }
+
+    footer {
+        max-width: 1000px;
+        margin: 4rem auto 0;
+        border-top: 1px solid var(--border-color);
+        padding-top: 1.5rem;
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--gray-color);
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 1.5rem 1rem;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+        }
+
+        .hero {
+            margin-bottom: 2.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        nav {
+            gap: 1rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .card {
+            transition: none;
+        }
+    }
+</style>
+
+
 </head>
+
 <body>
 
-    <main>
-        <div class="eyebrow">A little corner of the web</div>
-        <h1>Things I've<br><span>made.</span></h1>
-        <p class="subtitle">A handful of web experiments, small projects and things I've enjoyed putting together. Have a poke around.</p>
-        <div class="scribble">→ choose something fun</div>
+<header>
+    <a href="#" class="logo" aria-label="SimpleBite home">SimpleBite.</a>
 
-        <nav class="grid" aria-label="Projects">
-            <a href="/recipes/index.html" class="card">
-                <span class="number">01</span>
-                <span class="shape" aria-hidden="true"></span>
-                <h2>Recipes</h2>
-                <p>A site designed for a collection of recipes.</p>
-            </a>
+    <nav aria-label="Main navigation">
+        <a href="#">Recipes</a>
+        <a href="#">About</a>
+    </nav>
+</header>
 
-            <a href="/gallery/index.html" class="card">
-                <span class="number">02</span>
-                <span class="shape" aria-hidden="true"></span>
-                <h2>Gallery</h2>
-                <p>View an interactive image gallery.</p>
-            </a>
+<main>
+    <section class="hero">
+        <h1>Simple, honest recipes.</h1>
+        <p>No distractions. Just the food.</p>
+    </section>
 
-            <a href="/polaroids/index.html" class="card">
-                <span class="number">03</span>
-                <span class="shape" aria-hidden="true"></span>
-                <h2>Polaroids</h2>
-                <p>A collection of Polaroid-style images.</p>
-            </a>
+    <section class="grid" aria-label="Featured recipes">
 
-            <a href="/feature/index.html" class="card">
-                <span class="number">04</span>
-                <span class="shape" aria-hidden="true"></span>
-                <h2>Feature</h2>
-                <p>A short essay on the history of Easterhouse.</p>
-            </a>
-        </nav>
+        <!-- Recipe Card 1 -->
+        <article class="card">
+            <img
+                src="./easy-chickpea-masala/chickpea-masala.jpg"
+                alt="Easy chickpea masala"
+                class="card-img"
+            >
+            <div class="card-content">
+                <div class="card-category">Lunch</div>
+                <h2 class="card-title">
+                    <a href="./easy-chickpea-masala/index.html">Easy Chickpea Masala</a>
+                </h2>
+                <div class="card-meta">15 mins</div>
+            </div>
+        </article>
 
-        <footer>Made with HTML, CSS &amp; curiosity.</footer>
-    </main>
+        <!-- Recipe Card 2 -->
+        <article class="card">
+            <img
+                src="./easy-halloumi-burgers/easy-halloumi-burgers.jpeg"
+                alt="Easy halloumi burgers with salad and dressing"
+                class="card-img"
+            >
+            <div class="card-content">
+                <div class="card-category">Dinner</div>
+                <h2 class="card-title">
+                    <a href="./easy-halloumi-burgers/index.html">Easy Halloumi Burgers</a>
+                </h2>
+                <div class="card-meta">30 mins</div>
+            </div>
+        </article>
+
+        <!-- Recipe Card 3 -->
+        <article class="card">
+            <img
+                src="./spicy-mexican-bean-soup/spicy-mexican-bean-soup.jpeg"
+                alt="Bowl of spicy Mexican bean soup"
+                class="card-img"
+            >
+            <div class="card-content">
+                <div class="card-category">Soup</div>
+                <h2 class="card-title">
+                    <a href="./spicy-mexican-bean-soup/index.html">Spicy Mexican Bean Soup</a>
+                </h2>
+                <div class="card-meta">25 mins</div>
+            </div>
+        </article>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 SimpleBite. Built with minimal HTML &amp; CSS.</p>
+</footer>
 
 </body>
 </html>
