@@ -1,1 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spicy Mexican Bean Soup — a simple, honest recipe from SimpleBite.">
+    <title>Spicy Mexican Bean Soup — SimpleBite</title>
 
+<style>
+    :root {
+        --bg-color: #fdfbf7;
+        --text-color: #222222;
+        --gray-color: #666666;
+        --accent-color: #c86d51;
+        --card-bg: #ffffff;
+        --border-color: #eae7df;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        padding: 2rem 1rem;
+    }
+
+    header.site-header {
+        max-width: 1000px;
+        margin: 0 auto 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    nav a {
+        color: var(--gray-color);
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+        color: var(--text-color);
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 3px;
+    }
+
+    main {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .breadcrumb {
+        font-size: 0.9rem;
+        color: var(--gray-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb a {
+        color: var(--gray-color);
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover,
+    .breadcrumb a:focus-visible {
+        color: var(--accent-color);
+        text-decoration: underline;
+    }
+
+    .recipe-category {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--accent-color);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+
+    .recipe-meta {
+        font-size: 0.95rem;
+        color: var(--gray-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .responsive-img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 6px;
+        margin-bottom: 2.5rem;
+        background-color: #f0ede6;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    h2:first-of-type {
+        margin-top: 0;
+    }
+
+    ul, ol {
+        padding-left: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    ol li {
+        padding-left: 0.3rem;
+    }
+
+    footer {
+        max-width: 1000px;
+        margin: 4rem auto 0;
+        border-top: 1px solid var(--border-color);
+        padding-top: 1.5rem;
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--gray-color);
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 1.5rem 1rem;
+        }
+
+        header.site-header {
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-size: 1.85rem;
+        }
+
+        nav {
+            gap: 1rem;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+    <a href="../index.html" class="logo" aria-label="SimpleBite home">SimpleBite.</a>
+
+    <nav aria-label="Main navigation">
+        <a href="../index.html">Recipes</a>
+        <a href="#">About</a>
+    </nav>
+</header>
+
+<main>
+    <p class="breadcrumb"><a href="../index.html">&larr; Back to recipes</a></p>
+
+    <article>
+        <header>
+            <div class="recipe-category">Soup</div>
+            <h1>Spicy Mexican Bean Soup</h1>
+            <p class="recipe-meta">15 mins</p>
+            <img
+                src="spicy-mexican-bean-soup.jpeg"
+                alt="Bowl of spicy Mexican bean soup"
+                class="responsive-img"
+            >
+        </header>
+
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 onion</li>
+            <li>2–3 garlic cloves</li>
+            <li>2 medium carrots or 1 medium carrot and 1 medium sweet potato</li>
+            <li>1 red pepper</li>
+            <li>½ vegetable stock cube</li>
+            <li>1 x 400g/14oz can red kidney beans</li>
+            <li>1 tsp vegetable oil</li>
+            <li>1 tsp chilli powder</li>
+            <li>1 tsp ground cumin (optional)</li>
+            <li>1 tsp dried oregano (optional)</li>
+            <li>1 x 400g/14oz can chopped tomatoes</li>
+            <li>ground black pepper (optional)</li>
+        </ul>
+
+        <h2>Method</h2>
+        <ol>
+            <li>Peel the onion and chop into small pieces, then peel and press or finely chop the garlic (chop it as small as you can).</li>
+            <li>Peel, top and tail the carrots (and the sweet potato if using) and chop into 1cm/½in chunks.</li>
+            <li>Wash the pepper, deseed and slice into 1cm/½in pieces.</li>
+            <li>Place the onion, garlic, carrots and (sweet potatoes if using) in the microwavable bowl and mix well. Place the bowl in the microwave and cook on full power for three minutes.</li>
+            <li>Measure 300ml/10fl oz of boiling water into a measuring jug, crumble in the stock cube and stir to dissolve. Open the can of kidney beans, drain and rinse with cold water through the colander. Set aside.</li>
+            <li>Add the red pepper, oil and chilli powder to the microwaveable bowl. Add the cumin and oregano, if using. Stir and microwave on full power for one minute.</li>
+            <li>Stir in the chopped tomatoes, stock and black pepper, to taste (if using). Stir well again, then microwave on full power for 15 minutes, stirring every five minutes.</li>
+            <li>Remove the soup from the microwave. Taste (take care the soup will be very hot) and add more black pepper if required (if using).</li>
+            <li>If you want smooth soup, rather than chunky soup, you can blend it at this stage. (Ladle a third of the soup into a jug blender. Holding a tea towel over the lid, blend the soup and pour into a clean mixing bowl. Repeat the process until all the soup is blended. Return to the microwave-safe bowl.)</li>
+            <li>Add the kidney beans to the soup and microwave on full power for three minutes, stirring after two minutes.</li>
+            <li>Remove the soup from the microwave and allow to stand for one minute before serving.</li>
+        </ol>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2026 SimpleBite. Built with minimal HTML &amp; CSS.</p>
+</footer>
+
+</body>
+</html>
