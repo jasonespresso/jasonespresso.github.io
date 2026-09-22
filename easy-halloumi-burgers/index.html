@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easy halloumi burgers — a simple, honest recipe from SimpleBite.">
+    <title>Easy Halloumi Brugers — SimpleBite</title>
 
+<style>
+    :root {
+        --bg-color: #fdfbf7;
+        --text-color: #222222;
+        --gray-color: #666666;
+        --accent-color: #c86d51;
+        --card-bg: #ffffff;
+        --border-color: #eae7df;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        padding: 2rem 1rem;
+    }
+
+    header.site-header {
+        max-width: 1000px;
+        margin: 0 auto 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    nav a {
+        color: var(--gray-color);
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+        color: var(--text-color);
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 3px;
+    }
+
+    main {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .breadcrumb {
+        font-size: 0.9rem;
+        color: var(--gray-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb a {
+        color: var(--gray-color);
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover,
+    .breadcrumb a:focus-visible {
+        color: var(--accent-color);
+        text-decoration: underline;
+    }
+
+    .recipe-category {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--accent-color);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+
+    .recipe-meta {
+        font-size: 0.95rem;
+        color: var(--gray-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .responsive-img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 6px;
+        margin-bottom: 2.5rem;
+        background-color: #f0ede6;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    h2:first-of-type {
+        margin-top: 0;
+    }
+
+    ul, ol {
+        padding-left: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    ol li {
+        padding-left: 0.3rem;
+    }
+
+    footer {
+        max-width: 1000px;
+        margin: 4rem auto 0;
+        border-top: 1px solid var(--border-color);
+        padding-top: 1.5rem;
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--gray-color);
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 1.5rem 1rem;
+        }
+
+        header.site-header {
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-size: 1.85rem;
+        }
+
+        nav {
+            gap: 1rem;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+    <a href="../index.html" class="logo" aria-label="SimpleBite home">SimpleBite.</a>
+
+    <nav aria-label="Main navigation">
+        <a href="../index.html">Recipes</a>
+        <a href="#">About</a>
+    </nav>
+</header>
+
+<main>
+    <p class="breadcrumb"><a href="../index.html">&larr; Back to recipes</a></p>
+
+    <article>
+        <header>
+            <div class="recipe-category">Dinner</div>
+            <h1>Easy Halloumi Burgers</h1>
+            <p class="recipe-meta">15 mins</p>
+            <img
+                src="easy-halloumi-burgers.jpeg"
+                alt="Halloumi burgers in buns with salad and dressing"
+                class="responsive-img"
+            >
+        </header>
+
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 tbsp olive oil</li>
+            <li>2 portobello mushrooms, wiped clean and stalks removed</li>
+            <li>200g/7oz halloumi cheese, thickly sliced</li>
+            <li>2 brioche buns, cut in half</li>
+            <li>2 tbsp finely chopped onion</li>
+            <li>2 tbsp finely chopped tomato</li>
+            <li>2 tbsp finely chopped cucumber</li>
+            <li>2 tbsp finely chopped fresh mint</li>
+            <li>1 lime, juice only</li>
+            <li>4 tbsp hummus</li>
+            <li>1 large tomato, thickly sliced</li>
+            <li>4 romaine lettuce leaves, roughly torn</li>
+            <li>salt and freshly ground black pepper</li>
+        </ul>
+
+        <h2>Method</h2>
+        <ol>
+            <li>Heat a griddle pan or barbecue until hot. Brush half the oil over the mushrooms and season well. Place on the griddle pan or barbecue and cook for 6–8 minutes, turning them over halfway through cooking.</li>
+            <li>Meanwhile, brush the remaining oil over the halloumi slices and cut-side of the brioche buns. Cook for 2–3 minutes, or until lightly charred.</li>
+            <li>Mix together the chopped onion, tomato, cucumber and mint with the lime juice and season well.</li>
+            <li>To assemble the burgers, put a mushroom on the bottom brioche half and spread over the hummus. Top with the sliced tomato, lettuce and halloumi. Spoon over the onion and tomato relish, sandwich with the brioche lid and eat straight away.</li>
+        </ol>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2026 SimpleBite. Built with minimal HTML &amp; CSS.</p>
+</footer>
+
+</body>
+</html>
