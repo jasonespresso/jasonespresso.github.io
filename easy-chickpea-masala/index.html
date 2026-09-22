@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easy chickpea masala — a simple, honest recipe from SimpleBite.">
+    <title>Easy Chickpea Masala — SimpleBite</title>
 
+<style>
+    :root {
+        --bg-color: #fdfbf7;
+        --text-color: #222222;
+        --gray-color: #666666;
+        --accent-color: #c86d51;
+        --card-bg: #ffffff;
+        --border-color: #eae7df;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        padding: 2rem 1rem;
+    }
+
+    header.site-header {
+        max-width: 1000px;
+        margin: 0 auto 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    nav a {
+        color: var(--gray-color);
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+        color: var(--text-color);
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 3px;
+    }
+
+    main {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .breadcrumb {
+        font-size: 0.9rem;
+        color: var(--gray-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb a {
+        color: var(--gray-color);
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover,
+    .breadcrumb a:focus-visible {
+        color: var(--accent-color);
+        text-decoration: underline;
+    }
+
+    .recipe-category {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--accent-color);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+
+    .recipe-meta {
+        font-size: 0.95rem;
+        color: var(--gray-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .responsive-img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 6px;
+        margin-bottom: 2.5rem;
+        background-color: #f0ede6;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    h2:first-of-type {
+        margin-top: 0;
+    }
+
+    ul, ol {
+        padding-left: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    ol li {
+        padding-left: 0.3rem;
+    }
+
+    footer {
+        max-width: 1000px;
+        margin: 4rem auto 0;
+        border-top: 1px solid var(--border-color);
+        padding-top: 1.5rem;
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--gray-color);
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 1.5rem 1rem;
+        }
+
+        header.site-header {
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-size: 1.85rem;
+        }
+
+        nav {
+            gap: 1rem;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+    <a href="../index.html" class="logo" aria-label="SimpleBite home">SimpleBite.</a>
+
+    <nav aria-label="Main navigation">
+        <a href="../index.html">Recipes</a>
+        <a href="#">About</a>
+    </nav>
+</header>
+
+<main>
+    <p class="breadcrumb"><a href="../index.html">&larr; Back to recipes</a></p>
+
+    <article>
+        <header>
+            <div class="recipe-category">Lunch</div>
+            <h1>Easy Chickpea Masala</h1>
+            <p class="recipe-meta">15 mins</p>
+            <img
+                src="chickpea-masala.jpg"
+                alt="Bowl of chickpea masala garnished with coriander"
+                class="responsive-img"
+            >
+        </header>
+
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 tbsp vegetable or olive oil</li>
+            <li>1 onion, finely chopped</li>
+            <li>1 tbsp garam masala</li>
+            <li>4 garlic cloves, crushed</li>
+            <li>2 inch piece fresh root ginger, peeled and grated</li>
+            <li>2 red finger chillies, very finely chopped</li>
+            <li>20g fresh coriander, finely chopped, reserving a few leaves for garnish</li>
+            <li>400g tin chickpeas, drained</li>
+            <li>2 x 400g tin chopped tomatoes</li>
+            <li>1-3 tsp caster sugar, to taste (optional)</li>
+            <li>pinch salt, to taste</li>
+            <li>1-2 tbsp lemon juice, to taste</li>
+        </ul>
+
+        <h2>Method</h2>
+        <ol>
+            <li>Heat the oil in a medium pan, add the onion and garam masala and cook for 5-8 minutes, until soft and translucent.</li>
+            <li>Add the garlic, ginger, chillies and the chopped coriander, setting some coriander aside for garnish. Cook over a low heat for 3-5 minutes until fragrant.</li>
+            <li>Add the chickpeas and tomatoes and bring to the boil. Reduce the heat and simmer uncovered for 20 minutes, until reduced to the consistency of thick soup. If it is looking too thick, add a splash of water.</li>
+            <li>Remove from the heat, taste, and add the sugar, salt and lemon juice to taste.</li>
+            <li>Serve sprinkled with reserved coriander leaves.</li>
+        </ol>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2026 SimpleBite. Built with minimal HTML &amp; CSS.</p>
+</footer>
+
+</body>
+</html>
